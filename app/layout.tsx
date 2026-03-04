@@ -14,12 +14,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "L'Alternativa 0.1 | Pizzeria Italiana",
+  title: {
+    default: "L'Alternativa 0.1",
+    template: "%s | L'Alternativa 0.1",
+  },
   description:
-    "Pizza artigianale, impasti innovativi e ingredienti selezionati.",
+    "Pizza artigianale contemporanea a Bologna. 48h di lievitazione naturale.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "L'Alternativa 0.1",
-    description: "Esperienza autentica italiana.",
+    description:
+      "Pizza artigianale contemporanea a Bologna. Prenota il tuo tavolo.",
+    url: "https://tuodominio.it",
+    siteName: "L'Alternativa 0.1",
+    locale: "it_IT",
+    type: "website",
   },
 };
 
