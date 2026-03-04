@@ -118,7 +118,7 @@ h1, h2, h3 {
 
 /* CARDS */
 .section {
-  padding: 140px 0;
+  padding: 50px 0;
 }
 
 .section-title {
@@ -210,7 +210,7 @@ h1, h2, h3 {
 
 .craft-section {
   position: relative;
-  padding: 180px 0;
+  padding: 100px 0;
   background: url("https://images.unsplash.com/photo-1509440159596-0249088772ff") center/cover fixed;
   text-align: center;
   overflow: hidden;
@@ -289,7 +289,7 @@ h1, h2, h3 {
 ========================= */
 
 .philosophy {
-  padding: 180px 0;
+  padding: 100px 0;
   background: #0f0f0f;
 }
 
@@ -348,7 +348,7 @@ h1, h2, h3 {
 
 .reservation {
   position: relative;
-  padding: 200px 0;
+  padding: 100px 0;
   background: url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5") center/cover fixed;
   text-align: center;
 }
@@ -396,31 +396,54 @@ h1, h2, h3 {
 /* =========================
    FOOTER PREMIUM
 ========================= */
-
+/* Footer Background */
 .footer-premium {
-  background: #000;
-  padding: 100px 0 40px;
+  background:#0a0a0a;
+  color: #ccc;
+  padding: 40px 0 40px;
+  font-family: "Helvetica Neue", sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Grid Layout */
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 50px;
+  margin-bottom: 40px;
 }
 
-.footer-premium h3 {
-  font-size: 28px;
+/* Brand Section */
+.footer-brand h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
+.footer-brand p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* Footer Titles */
 .footer-premium h4 {
-  margin-bottom: 20px;
-  font-size: 16px;
-  opacity: 0.7;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c62828; /* акцент */
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
+/* Lists */
 .footer-premium ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-premium li {
@@ -430,18 +453,59 @@ h1, h2, h3 {
 .footer-premium a {
   text-decoration: none;
   color: #aaa;
-  transition: 0.3s;
+  transition: 0.3s, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
 }
 
 .footer-premium a:hover {
   color: #fff;
+  transform: translateY(-2px);
 }
 
+.footer-premium a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #c62828; /* акцент */
+  transition: 0.3s;
+}
+
+.footer-premium a:hover::after {
+  width: 100%;
+}
+
+/* Social Icons */
+.social-icon {
+  font-size: 16px;
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-premium a:hover .social-icon {
+  transform: scale(1.2);
+  color: #c62828;
+}
+
+/* Footer Bottom */
 .footer-bottom {
   text-align: center;
-  margin-top: 60px;
-  opacity: 0.4;
-  font-size: 14px;
+  margin-top: 50px;
+  opacity: 0.5;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 20px;
+}
+
+/* Subtle glow on hover */
+.footer-premium:hover {
+  box-shadow: inset 0 0 120px rgba(255,255,255,0.02);
 }
 
 /* Responsive */
@@ -451,5 +515,131 @@ h1, h2, h3 {
   }
   .philosophy-image {
     height: 400px;
+  }
+}
+
+.map-section {
+  padding: 50px 0;
+  background: #0f0f0f;
+  text-align: center;
+}
+
+.map-wrapper {
+  margin: 40px 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, #1FA855, #178C47);
+}
+
+.btn-whatsapp:hover {
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+}
+
+.hero-rating {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: white;
+  opacity: 0.9;
+}
+
+.hero-rating .stars {
+  color: #f5c518; /* золотые звёзды */
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-rating .rating-text {
+  font-weight: 500;
+}
+
+.reviews-section {
+  padding: 1px 0;
+  background:#0f0f0f;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.reviews-section .section-eyebrow {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #c62828; /* цвет акцента */
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.reviews-section .section-title {
+  font-size: 36px;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.review-card {
+  background: #1c1c1c;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+}
+
+.review-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  color: #f5c518; /* золотые звёзды */
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.review-author {
+  font-weight: 600;
+  font-size: 14px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 60px 0;
+  }
+
+  .reviews-grid {
+    gap: 16px;
+  }
+
+  .review-card {
+    padding: 16px;
+  }
+
+  .reviews-section .section-title {
+    font-size: 24px;
   }
 }
