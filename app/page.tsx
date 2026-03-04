@@ -53,8 +53,13 @@ export default function Home() {
         rel="noopener noreferrer"
         className="btn-primary btn-whatsapp"
       >
-        Prenota
+        Prenota What's App
       </a>
+
+      <a href="#menu" className="btn-primary">
+        Chiama Ora
+      </a>
+
     </div>
 
     {/* Добавляем рейтинг */}
@@ -69,7 +74,11 @@ export default function Home() {
       <section id="menu" className="section">
         <div className="container">
           <h2 className="section-title">Signature Collection</h2>
-
+      <p className="section-text">
+        Il tempo è il nostro ingrediente segreto.
+        Ogni impasto riposa lentamente per sviluppare
+        leggerezza, struttura e carattere.
+      </p>
           <div className="card-grid">
             {[
               {
@@ -212,7 +221,7 @@ export default function Home() {
 <section className="map-section">
   <div className="container">
     <span className="section-eyebrow">Dove siamo</span>
-    <h2>Come raggiungerci</h2>
+    <h2 className="map-title">Come raggiungerci</h2>
 
     <div className="map-wrapper">
       <iframe

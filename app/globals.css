@@ -121,10 +121,21 @@ h1, h2, h3 {
   padding: 50px 0;
 }
 
+.section-text {
+  max-width: 700px;
+  margin: auto;
+  font-size: 20px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: var(--font-display);
+  color: #ffffff;
+}
+
 .section-title {
   font-size: 42px;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
 }
 
 .card-grid {
@@ -425,7 +436,7 @@ h1, h2, h3 {
 
 .footer-brand p {
   font-size: 14px;
-  color: #aaa;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -433,7 +444,7 @@ h1, h2, h3 {
 .footer-premium h4 {
   font-size: 14px;
   font-weight: 600;
-  color: #c62828; /* акцент */
+  color: #c62828; /* более яркий красный */
   margin-bottom: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -452,7 +463,7 @@ h1, h2, h3 {
 
 .footer-premium a {
   text-decoration: none;
-  color: #aaa;
+  color: #fff;
   transition: 0.3s, transform 0.2s ease;
   display: inline-flex;
   align-items: center;
@@ -524,10 +535,23 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.map-section .section-eyebrow {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #ffffff; /* цвет акцента */
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
 .map-wrapper {
   margin: 40px 0;
   border-radius: 16px;
   overflow: hidden;
+}
+
+.map-title {
+  font-family: var(--font-display);
+  font-size: 36px;
 }
 
 .btn-whatsapp {
@@ -570,7 +594,7 @@ h1, h2, h3 {
 .reviews-section .section-eyebrow {
   font-size: 16px;
   letter-spacing: 2px;
-  color: #c62828; /* цвет акцента */
+  color: #ffffff; /* цвет акцента */
   text-transform: uppercase;
   margin-bottom: 12px;
 }
