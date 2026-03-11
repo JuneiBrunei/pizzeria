@@ -12,6 +12,23 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  const elements = document.querySelectorAll(".fade-in");
+  elements.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
 
   return (
     <>
@@ -72,7 +89,7 @@ export default function Home() {
 </section>
 
       {/* MENU PREMIUM */}
-      <section id="menu" className="section">
+      <section id="menu" className="section fade-in">
         <div className="container">
           <h2 className="section-title">Raccolta Firme</h2>
       <p className="section-text">
@@ -116,7 +133,7 @@ export default function Home() {
         </div>
       </section>
 
-    <section id="impasti" className="craft-section">
+    <section id="impasti" className="craft-section fade-in">
   <div className="craft-overlay" />
   <div className="container craft-inner">
     <div className="craft-header">
@@ -149,7 +166,7 @@ export default function Home() {
 </section>
 
       {/* ABOUT */}
-      <section id="about" className="philosophy">
+      <section id="about" className="philosophy fade-in">
   <div className="container philosophy-grid">
     
     <div className="philosophy-image">
@@ -252,7 +269,7 @@ export default function Home() {
 </section>
 
       {/* CONTACT */}
-      <section id="contact" className="reservation">
+      <section id="contact" className="reservation fade-in">
   <div className="reservation-overlay" />
   <div className="container reservation-inner">
 
