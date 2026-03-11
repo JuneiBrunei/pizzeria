@@ -20,6 +20,7 @@ export default function Home() {
         <div className="container nav-inner">
           <div className="logo">L'Alternativa 0.1</div>
           <nav>
+            <a href="/en">EN</a>
             <a href="#menu">Menù</a>
             <a href="#impasti">Impasti</a>
             <a href="#about">Filosofia</a>
@@ -73,7 +74,7 @@ export default function Home() {
       {/* MENU PREMIUM */}
       <section id="menu" className="section">
         <div className="container">
-          <h2 className="section-title">Signature Collection</h2>
+          <h2 className="section-title">Raccolta Firme</h2>
       <p className="section-text">
         Il tempo è il nostro ingrediente segreto.
         Ogni impasto riposa lentamente per sviluppare
@@ -81,26 +82,32 @@ export default function Home() {
       </p>
           <div className="card-grid">
             {[
-              {
-                name: "Margherita Reale",
-                price: "€14",
-                img: "https://www.ricettealvolo.it/wp-content/uploads/2023/03/pizza-margherita1.jpg",
-              },
-              {
-                name: "Tartufo Nero",
-                price: "€18",
-                img: "https://www.foodblog.it/wp-content/uploads/2019/10/zaid-hussain-sayed-hgplnmepmaa-unsplash.jpg",
-              },
-              {
-                name: "Burrata Suprema",
-                price: "€19",
-                img: "https://images.unsplash.com/photo-1594007654729-407eedc4be65",
-              },
-            ].map((pizza, i) => (
+                {
+                  name: "Margherita Reale",
+                  price: "€14",
+                  ingredients: "Pomodoro San Marzano, mozzarella fior di latte, basilico, olio EVO",
+                  img: "https://www.ricettealvolo.it/wp-content/uploads/2023/03/pizza-margherita1.jpg",
+                },
+                {
+                  name: "Tartufo Nero",
+                  price: "€18",
+                  ingredients: "Mozzarella, crema di tartufo nero, funghi porcini, parmigiano",
+                  img: "https://www.foodblog.it/wp-content/uploads/2019/10/zaid-hussain-sayed-hgplnmepmaa-unsplash.jpg",
+                },
+                {
+                  name: "Burrata Suprema",
+                  price: "€19",
+                  ingredients: "Pomodoro, burrata fresca, pomodorini confit, basilico",
+                  img: "https://images.unsplash.com/photo-1594007654729-407eedc4be65",
+                },
+              ].map((pizza, i) => (
               <div className="card" key={i}>
                 <img src={pizza.img} />
                 <div className="card-body">
                   <h3>{pizza.name}</h3>
+                   <p className="pizza-ingredients">
+                    {pizza.ingredients}
+                    </p>
                   <span className="price">{pizza.price}</span>
                 </div>
               </div>

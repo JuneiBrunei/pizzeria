@@ -165,6 +165,15 @@ h1, h2, h3 {
   padding: 30px;
 }
 
+.pizza-ingredients{
+  font-size:14px;
+  opacity:0.8;
+  margin:8px 0 10px;
+  line-height:1.4;
+  font-style: italic;
+  color: #777;
+}
+
 .price {
   display: block;
   margin-top: 10px;
