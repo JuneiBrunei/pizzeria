@@ -118,7 +118,7 @@ useEffect(() => {
                   img: "https://images.unsplash.com/photo-1594007654729-407eedc4be65",
                 },
               ].map((pizza, i) => (
-              <div className="card" key={i}>
+              <div className="card reveal" key={i}>
                 <img src={pizza.img} />
                 <div className="card-body">
                   <h3>{pizza.name}</h3>
