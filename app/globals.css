@@ -1,3 +1,12 @@
+*{
+  box-sizing:border-box;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -14,9 +23,10 @@ h1, h2, h3 {
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
 }
 
 /* NAVBAR */
@@ -91,7 +101,7 @@ h1, h2, h3 {
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .btn-primary {
@@ -675,4 +685,36 @@ h1, h2, h3 {
   .reviews-section .section-title {
     font-size: 24px;
   }
+}
+
+@media (max-width:768px){
+
+.hero,
+.craft-section,
+.reservation{
+  min-height:70vh;
+  background-size:cover;
+  background-position:center top;
+  padding:80px 0;
+}
+.hero-buttons{
+  flex-direction:column;
+}
+
+.btn-primary{
+  width:100%;
+  text-align:center;
+}
+nav{
+  gap:12px;
+  font-size:14px;
+}
+.hero h1{
+  font-size:32px;
+  line-height:1.2;
+}
+
+.hero p{
+  font-size:16px;
+}
 }
