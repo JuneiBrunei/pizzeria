@@ -718,3 +718,18 @@ nav{
   font-size:16px;
 }
 }
+@media (max-width:768px){
+  .hero {
+    background: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092");
+    background-position: center top; /* смещаем картинку вверх */
+  }
+
+  .craft-section{
+    background: url("https://images.unsplash.com/photo-1509440159596-0249088772ff");
+    background-position: center top;
+  }
+  .reservation {
+    background: url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5");
+    background-position: center top;
+  }
+}
